@@ -1,0 +1,28 @@
+{
+  "name": "learning-mern",
+  "version": "1.0.0",
+  "description": "creating a todo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderAswin123/learning-mern.git"
+  },
+  "author": "Aswin VR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderAswin123/learning-mern/issues"
+  },
+  "homepage": "https://github.com/coderAswin123/learning-mern#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
