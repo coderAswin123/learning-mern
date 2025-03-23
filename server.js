@@ -9,6 +9,8 @@ app.use(express.urlencoded({extended: false}))
 
 app.use('/api/todos', require('./backend/routs/todo_routes'))
 
+app.use(errorHandler)
+
 app.listen(port, ()=> {
     console.log(`Server is listening on port ${port}`);
 });
