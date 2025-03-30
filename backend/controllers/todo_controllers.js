@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const Todo = require('../models/todo_models');
+const Todo = require('../models/todo_schema');
 
 const getTodo = asyncHandler(async (request, response) => {
     const todo = await Todo.find();
