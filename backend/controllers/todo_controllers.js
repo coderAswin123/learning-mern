@@ -53,4 +53,3 @@ module.exports = {
     updateTodo,
     deleteTodo
 };
-
