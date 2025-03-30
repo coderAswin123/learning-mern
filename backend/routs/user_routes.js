@@ -7,4 +7,5 @@ router.route('/').post(registerUser)
 router.route('/login').post(loginUser)
 router.route('/me').get(getLoggedInUser)
 
+
 module.exports = router;
