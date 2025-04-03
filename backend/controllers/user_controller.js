@@ -70,11 +70,10 @@ const loginUser = asyncHandler(async(request,response) => {
 
 });
 
-const getLoggedInUser = (req,res) => {
-    res.json({
-        message: 'logged in user details',
-    });
-};
+const getLoggedInUser =asyncHandler(async(req,res) => {
+    const user = await User.find();
+    res.json(user);
+});
 
 module.exports = {
 
