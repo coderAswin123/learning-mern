@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler');
 const User = require('../models/user_schema');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const { response } = require('express');
+//const { response } = require('express');
 
 const generateToken = (id) => {
     return jwt.sign(
@@ -47,13 +47,13 @@ const registerUser = asyncHandler(async(request,response) => {
 });
 
 const loginUser = asyncHandler(async(request,response) => {
-    const {mail , password} = request.body;
+    const {email , password} = request.body;
 
     if(!email || !password){
         response.status(400);
         throw new Error("Please enter both email and password");
     }
-    const user = await user.findOne({email});
+    const user = await User.findOne({email});
 
     if(user && (await bcrypt.compare(password, user.password))){
         response.json({
